@@ -1,0 +1,22 @@
+
+@custom-color-blue1: #1639ac;
+@header__background-color: @custom-color-blue1;
+@header-icons-color: @color-white;
+@header-icons-color-hover: @color-white;
+
+& when (@media-common = true) {
+    .block-search {
+        .label:before {
+            .lib-css(color, @color-white);
+        }
+    }
+    .minicart-wrapper {
+        .action {
+            &.showcart {
+                &:before {
+                    .lib-css(color, @color-white);
+                }
+            }
+        }
+    }
+}

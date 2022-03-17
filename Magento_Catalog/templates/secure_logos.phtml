@@ -1,0 +1,19 @@
+<?php
+
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+?>
+<div class="product-secure-logos-holder">
+    <?php if ($block->getData('path_image')): ?>
+        <div class="product-secure-title">
+            <?php if ($block->getData('title')): ?>
+                <h2><?= $block->escapeHtml($block->getData('title')); ?></h2>
+            <?php endif;?>
+        </div>
+        <div class="product-secure-logos">
+            <img src="<?= $block->escapeUrl($block->getViewFileUrl($block->getData('path_image'))); ?>"
+                 alt="<?= $block->escapeHtmlAttr($block->getData('title')); ?>" />
+        </div>
+    <?php endif; ?>
+</div>
